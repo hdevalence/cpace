@@ -1,10 +1,15 @@
 [package]
 name = "cpace"
+# Before bumping version:
+# - update html_root_url
 version = "0.1.0"
 authors = ["Henry de Valence <hdevalence@hdevalence.ca>"]
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "BSD-3-Clause"
+description = "An implementation of the CPace password-authenticated key exchange (PAKE)."
+repository = "https://github.com/hdevalence/cpace"
+readme = "README.md"
+keywords = ["crypto", "cryptography", "ristretto", "pake", "cpace"]
 
 [dependencies]
 thiserror = "1.0.14"

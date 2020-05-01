@@ -37,6 +37,7 @@
 //!
 //! assert_eq!(alice_key.0[..], bob_key.0[..]);
 //! ```
+#![doc(html_root_url = "https://docs.rs/cpace/0.1.0")]
 
 use std::convert::TryFrom;
 
