@@ -95,7 +95,7 @@ pub struct Context<'ctx> {
     pub associated_data: &'ctx [u8],
 }
 
-const CONTEXT_LABEL: &'static [u8; 10] = b"cpace-r255";
+const CONTEXT_LABEL: &[u8; 10] = b"cpace-r255";
 
 impl<'ctx> Context<'ctx> {
     // XXX this defeats the whole point of the alloc-free Context API.
@@ -128,7 +128,7 @@ impl<'ctx> Context<'ctx> {
     }
 }
 
-fn secret_generator<'ctx>(password: &str, salt: &[u8], context_bytes: &[u8]) -> RistrettoPoint {
+fn secret_generator(password: &str, salt: &[u8], context_bytes: &[u8]) -> RistrettoPoint {
     let mut output = [0; 64];
     // XXX Why does this use Sha512 instead of Sha256?
     Hkdf::<Sha512>::new(Some(salt), password.as_bytes())
